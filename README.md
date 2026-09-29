@@ -15,7 +15,7 @@ LogFlow, Java ile yazılmış basit bir pipeline uygulamasıdır. Uygulama bir l
 - `src/Stage.java`: Genel işlem aşaması arayüzü ve yaşam döngüsü metotlarıdır.
 - `src/FileLineSource.java`: Dosyadan her satırı bir `String` olarak okur.
 - `src/ConsoleSink.java`: Gelen her satırı konsola yazdırır.
-- `src/Pipeline.java`: Source ile sink arasındaki bağlantıyı kurar.
+- `src/Pipeline.java`: Aşamaları sıralı bir liste olarak saklar ve source ile sink arasındaki bağlantıyı kurar.
 - `src/Main.java`: Komut satırı parametresini alır, pipeline'ı kurar ve çalıştırır.
 - `data/access-small.log`: Örnek giriş log dosyasıdır.
 
