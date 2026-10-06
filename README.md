@@ -17,7 +17,7 @@ LogFlow Increment 2, Common Log Format satırlarını değişmez `LogRecord` nes
 - `src/LogRecord.java`: Zaman damgası, istemci IP'si, istek ve yanıt alanlarını taşıyan immutable domain kaydıdır.
 - `src/ParserStage.java`: CLF/Combined Log Format satırlarını `LogRecord` nesnelerine dönüştürür; hatalı satırları atlar ve sayar.
 - `src/ConsoleSink.java`: Gelen `LogRecord` değerini okunabilir tek satır olarak yazdırır.
-- `src/Pipeline.java`: Source → ParserStage → Sink bağlantısını açık ve sıralı biçimde kurar.
+- `src/Pipeline.java`: Source, sıralı aşamalar ve sink arasındaki bağlantıyı kurar.
 - `src/Main.java`: Komut satırı parametresini alır, pipeline'ı kurar ve çalıştırır.
 - `data/access-small.log`: Örnek giriş log dosyasıdır.
 
