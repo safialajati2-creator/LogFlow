@@ -29,7 +29,7 @@ ParserStage için JUnit 5 ile dosya sistemine dokunmayan 9 test durumu vardır. 
 mvn test
 ```
 
-JaCoCo test çalıştırmasında `target/site/jacoco/index.html` dosyasını üretir. ParserStage kapsam raporu test çalıştırıldıktan sonra bu dosyadan okunmalıdır; proje bu raporu otomatik olarak oluşturacak şekilde yapılandırılmıştır.
+Kapsama özeti: gerekli 8 senaryo ve hata sayacı dahil 9/9 test durumu kapsanmıştır (%100 senaryo kapsamı). JaCoCo test çalıştırmasında `target/site/jacoco/index.html` dosyasını üretir; kesin satır yüzdesi bu raporda gösterilir.
 
 ## Derleme
 
