@@ -7,8 +7,10 @@ public class Main {
 
         FileLineSource source = new FileLineSource(args[0]);
         ConsoleSink sink = new ConsoleSink();
+        ParserStage parser = new ParserStage();
 
-        Pipeline pipeline = new Pipeline(source, sink);
+        Pipeline pipeline = new Pipeline(source, sink).addStage(parser);
         pipeline.run();
+        System.out.println("Malformed lines skipped: " + parser.malformedCount());
     }
 }

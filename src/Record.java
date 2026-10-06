@@ -1,3 +1,3 @@
-/** Marker interface reserved for richer record types in later increments. */
+/** Common type for domain records flowing through LogFlow. */
 public interface Record {
 }
