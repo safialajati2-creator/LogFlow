@@ -16,5 +16,3 @@ Increment 2 kapsamında değiştirilen ve eklenen dosyalar:
 - `README.md` - Çalıştırma, test ve coverage açıklamaları.
 - `ARCHITECTURE.md` - Increment 2 mimari açıklaması.
 - `.gitignore` - Maven `target` klasörü.
-- `src/Pipeline.java` - Source → ParserStage → Sink bağlantısı açık ve sıralı olacak şekilde sadeleştirildi.
-- `src/Main.java` - Pipeline typed bileşenlerle doğrudan kuruluyor.
