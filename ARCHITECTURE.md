@@ -7,7 +7,7 @@ flowchart LR
     A[FileLineSource\nraw String] --> B[ParserStage\nLogRecord] --> C[ConsoleSink\none line]
 ```
 
-`Pipeline` aşamaları bir liste olarak saklar ve source ile sink arasındaki bağlantıyı kurar. `Main` yalnızca komut satırı parametresini okur, bileşenleri bir araya getirir, çalıştırır ve atlanan kayıt sayısını gösterir.
+`Pipeline` bu aşamada üç bileşeni açıkça bağlar: `Source<String>`, `Stage<String, LogRecord>` ve `Sink<LogRecord>`. Böylece veri akışının sırası koddan doğrudan okunur: source satırı üretir, parser kayda dönüştürür, sink kaydı tüketir. `Main` yalnızca bileşenleri oluşturur, pipeline'ı çalıştırır ve atlanan kayıt sayısını gösterir.
 
 `LogRecord` immutable tutulur. `attributes` haritası sonraki haftalarda parser'ın ilk aşamada bilmediği alanları eklemek için genişleme noktasıdır. Parser hatalı satırları bu hafta yalnızca atlar ve sayar; hataların ayrıntılı yönetimi sonraki aşamalara bırakılmıştır.
 
