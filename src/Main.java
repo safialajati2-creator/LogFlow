@@ -5,11 +5,11 @@ public class Main {
             return;
         }
 
-        Source<String> source = new FileLineSource(args[0]);
+        FileLineSource source = new FileLineSource(args[0]);
+        ConsoleSink sink = new ConsoleSink();
         ParserStage parser = new ParserStage();
-        Sink<LogRecord> sink = new ConsoleSink();
 
-        Pipeline pipeline = new Pipeline(source, parser, sink);
+        Pipeline pipeline = new Pipeline(source, sink).addStage(parser);
         pipeline.run();
         System.out.println("Malformed lines skipped: " + parser.malformedCount());
     }
